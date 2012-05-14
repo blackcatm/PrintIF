@@ -1,5 +1,5 @@
 /*
-  DHCP-based IP printer
+ DHCP-based IP printer
  
  This sketch uses the DHCP extensions to the Ethernet library
  to get an IP address via DHCP and print the address obtained.
@@ -10,7 +10,9 @@
  
  created 12 April 2011
  by Tom Igoe
- 
+
+ modified 13 May 2012 to act as an example of PrintIF utility library
+ by J.P. McGlinn 
  */
 
 #include <SPI.h>
