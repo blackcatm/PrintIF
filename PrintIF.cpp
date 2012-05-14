@@ -1,5 +1,5 @@
 /*
- PrintIF.h - Utility Library for printing Ethernet interface configuration
+ PrintIF.cpp - Utility Library for printing Ethernet interface configuration
  on Arduino
  Copyright (c) 2012 J.P. McGlinn. All Rights reserved
  
