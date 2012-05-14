@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map For OneWire
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PrintIF	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+print	KEYWORD2
+printIP	KEYWORD2
+printGW	KEYWORD2
+printMAC	KEYWORD2
+printMask	KEYWORD2
+printDNS	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################

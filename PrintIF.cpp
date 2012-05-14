@@ -1,11 +1,11 @@
 #include <PrintIF.h>
 
-void PrintIFClass::printInfo(Stream &output, byte mac[]){
+void PrintIFClass::print(Stream &output, byte mac[]){
     printMAC(output, mac, 1);
-    printInfo(output);
+    print(output);
 }
 
-void PrintIFClass::printInfo(Stream &output){
+void PrintIFClass::print(Stream &output){
     printIP(output);
     printMask(output);
     printGW(output);

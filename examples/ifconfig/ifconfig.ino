@@ -36,21 +36,54 @@ void setup() {
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");
     // no point in carrying on, so do nothing forevermore:
-    for(;;)
-      ;
+    forever();
   }
-
-  PrintIF.printInfo(Serial, mac);  
+  
 }
 
 
-void loop() {
-  if(Serial.available()){
-    char inChar = Serial.read();
-    if(inChar == '\n'){
-      PrintIF.printInfo(Serial, mac);
-    }
-  }
+// DEMO CODE RUNS ONCE
+void loop(){
+  //Print the interface information
+  PrintIF.print(Serial, mac);
+  Serial.println();
+
+  //As before, but no mac address
+  PrintIF.print(Serial);
+  Serial.println();
+
+  //use the default stream (Serial)
+  PrintIF.print(mac);
+  Serial.println();
+
+  //one more time without mac address
+  PrintIF.print();
+  Serial.println();
+
+
+  // You can also print individual properties, with and without labels.
+  // Send output to alternate streams if you like too.
+  Serial.println("\nIndividual properties:\n");
+  
+  PrintIF.printMAC(Serial, mac);
+  PrintIF.printMAC(mac);
+  PrintIF.printMAC(Serial, mac, 0);  Serial.println();
+  PrintIF.printMAC(mac, 0);          Serial.println();
+  
+  PrintIF.printIP(Serial);
+  PrintIF.printIP();
+  PrintIF.printIP(Serial, 0);        Serial.println();
+  PrintIF.printIP(0);                Serial.println();
+  
+  PrintIF.printGW(Serial);
+  PrintIF.printMask();
+  PrintIF.printDNS();
+
+  forever();
 }
 
 
+void forever(void){
+  while(1){
+  }
+}
